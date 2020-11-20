@@ -1,0 +1,109 @@
+{% extends 'base/base.html' %}
+{% block title %}{{ block.super }}{% endblock %}
+{% block content %}
+
+<body style="background-color:#EEF1F2;">
+
+    <div class="top-wrapper">
+        <div class="header-img">
+            <img src="" alt="ユーザーのヘッダー画像">
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+
+        <div class="user-name">
+            <p><i class="fas fa-heart"></i>佐藤　大樹<i class="fas fa-volume-up"></i></p>
+        </div>
+        <div class="room">
+            <a class="room-btn">
+                ROOM
+            </a>
+        </div>
+
+
+        <div class="introduce">
+            <p class="heading-letter">自己紹介</p>
+            <div class="introcude-textbox">
+                <p class="introduce-letter">こんにちは！！</p>
+            </div>
+
+        </div>
+
+        <div class="boder-bottom"></div>
+
+        <div class="carrier-data profile-box">
+            <p class="heading-letter">基本データ</p>
+
+            <div class="carrier-data-item">
+                <p>2020年度</p>
+            </div>
+
+
+            <div class="carrier-data-item">
+                <p class="carrier-data-first">会社名　部署　担当</p>
+                <p class="carrier-data-second">2020年4月〜入社</p>
+            </div>
+
+            <div class="carrier-data-item">
+                <p class="carrier-data-first">会社名　部署　担当</p>
+                <p class="carrier-data-second">2020年4月〜入社</p>
+            </div>
+
+            <div class="carrier-data-item">
+                <p class="carrier-data-first">趣味</p>
+            </div>
+
+            <div class="carrier-data-item">
+                <p class="carrier-data-first">社外活動</p>
+            </div>
+
+            <div class="carrier-data-item">
+                <p class="carrier-data-first">有志活動</p>
+            </div>
+
+
+        </div>
+
+        <div class="boder-bottom"></div>
+
+        <div class="create-room profile-box">
+            <p class="heading-letter">作成ルーム</p>
+
+            <div class="create-room-items">
+                <div class="clear"></div>
+                <div class="create-left-content">
+                    <img src="static/css/themes/default/assets/images/IMG_8991.jpg" class="profile-img" alt="">
+                </div>
+                <div class="create-right-content">
+                    <p style="color: black;">佐藤　大樹<i style="color: gray;" class="fas fa-volume-up"></i></p>
+                    <p>view 1000</p>
+                </div>
+
+
+            </div>
+            <div class="ui cards">
+                <div class="card">
+                    <div class="content">
+                        <div class="header">Elliot Fu</div>
+                        <div class="description">
+                            Elliot Fu is a film-maker from New York.
+                        </div>
+                    </div>
+                    <div class="ui bottom attached button">
+                        <i class="add icon"></i>
+                        Add Friend
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+{#    {% include 'base/sidebar.html' %}#}
+{% endblock %}

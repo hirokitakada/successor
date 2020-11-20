@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="ja">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    {% block meta_tag %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href=“https://use.fontawesome.com/releases/v5.6.1/css/all.css” rel=“stylesheet”>
+    <link href=“https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap” rel=“stylesheet”>
+    {% block css %}{% endblock %}
+    <title>
+        {% block title %}Successor{% endblock %}
+    </title>
+</head>
+
+<body>
+    <div class="ui stackable menu" style="background-color:#EEF1F2;" >
+      <div class="header item">
+          <a href="{% url 'base:top' %}" class="item" style="padding: 0px 10px;">
+            <img src="media/images/LOGO.pdf">
+            <b class="successor">
+                <span style="margin-right:10px"><span style="color:#0070C0;padding-left:8px;">S</span>uccessor</span>
+            </b>
+          </a>
+      </div>
+
+{#  <a href="{% url 'base:about' %}" class="item">#}
+{#  このサイトは何？#}
+{#  </a>#}
+{#  <a class="item" href="{% url 'thread:create_topic' %}">#}
+{#  イベントを作成#}
+{#  </a>#}
+      <div class="right menu">
+{#          <div class="item">#}
+{#              <a href="{% url 'thread:create_topic' %}" class="ui fluid teal button" >ルーム作成</a>#}
+{#          </div>#}
+
+          {% if user.is_authenticated %}
+          <a class="item" href="{% url 'accounts:profile' %}">ユーザー情報</a>
+          <a class="item" href="{% url 'accounts:logout' %}">ログアウト</a>
+          {% else %}
+          <a class="login" href="{% url 'accounts:login' %}" >ログイン</a>
+          <a class="signup" href="{% url 'accounts:create' %}" >新規登録</a>
+          {% endif %}
+
+      </div>
+    </div>
+
+    <div class="ui container" style="min-height:100vh;">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="ui inverted stackable footer segment">
+        <div class="ui container center aligned">
+          <div class="ui horizontal inverted small divided link list">
+            <a href="{% url 'base:top' %}" class="item">
+              <a class="item"><span style="font-size:15pt">©</span><span style="font-size:15pt;color:#4689FF">S</span><span style="font-size:15pt">uccessor</span></a>
+            </a>
+            <a href="{% url 'base:terms' %}" class="item">利用規約</a>
+            <a href="{% url 'base:policy' %}" class="item">プライバシーポリシー</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/semantic.js' %}"></script>
+    <links rel="stylesheet" href="{% static 'css/semantic.css' %}"></links>
+
+    {% block js %}{% endblock %}
+
+</body>

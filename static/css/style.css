@@ -1,0 +1,262 @@
+/*
+base.html
+ */
+
+
+.successor{
+    font-size: 30px;
+    font-family: 'BookBookman Old Style';
+}
+
+.login{
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
+    height: 30px;
+    margin: 20px 10px 20px 10px;
+    color: #0070C0;
+    border: thin solid #0070C0;
+    border-radius: 10px;
+
+}
+
+.signup{
+    display: inline-block;
+    font-size: 25px;
+    color: #EEF1F2;
+    background-color: #0070C0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px 10px 0px 10px;
+}
+
+/*
+top.html
+ */
+
+.ranking{
+    color: #0070C0;
+    text-align: center;
+}
+/*.ranking.content:first-letter{*/
+/*    font-size: 40px;*/
+/*    border: solid transparent;*/
+/*    border-radius: 50%;*/
+/*    background-color: khaki;*/
+/*    width: 35%;*/
+/*    margin: auto;*/
+/*    height: 50px;*/
+/*}*/
+.ranking.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    width: 35%;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ranking.contentright{
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+    width: 70%;
+
+}
+.ranking.number1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: khaki;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.ranking.number2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: gainsboro;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 50px;
+
+}
+.ranking.number3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: #90532b;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 50px;
+
+}
+
+/*
+introduce.html
+ */
+body {
+    text-align: center;
+}
+.header-img {
+  margin: 0 auto;
+  width: 80%;
+  height: 200px;
+  background-color: #fff;
+  margin-top: 100px;
+  border-radius: 20px;
+}
+
+.user-name {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    font-family: serif;
+
+}
+
+.user-name i {
+    color: gray;
+    font-size: 20px;
+}
+
+.fa-heart {
+    margin-right: 10px;
+}
+
+
+.fa-volume-up {
+    margin-left: 10px;
+}
+
+.room {
+    margin-top: 20px;
+font-family: 'Roboto Slab', serif;
+}
+
+
+.room-btn {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 30%;
+    background-color: #0070C0;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+.introduce {
+     margin: 0 auto;
+  width: 60%;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 20px;
+   text-align: left;
+
+}
+
+.heading-letter {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 2;
+
+}
+.introcude-textbox {
+    padding: 0 20px;
+}
+.bottom-line {
+   width: 10%;
+   height: 10%;
+}
+
+.profile-box  {
+    margin: 0 auto;
+    width: 60%;
+    background-color: #fff;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.carrier-data-item {
+    background-color: #EEF1F2;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.carrier-bottom{
+    margin-bottom: 80px;
+}
+
+.carrier-data-second {
+    font-size: 11px;
+    color: gray;
+    margin-top: 1px;
+}
+
+.boder-bottom {
+    width: 30%;
+    padding-top: 20px;
+    border-bottom: 1px solid #0070C0;
+    margin: 0 auto;
+}
+
+.create-room-items {
+    border: 1px solid;
+    color: gray;
+}
+
+.profile-img {
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+}
+
+
+.create-left-content {
+    float: left;
+    width: 30%;
+}
+
+.create-right-content {
+    width: 70%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
