@@ -1,24 +1,44 @@
-{% extends 'base/base.html' %}
-{% block title %}Successor - {{ block.super }}{% endblock %}
-{% block content %}
-<div class="ui grid stackable">
-    <div class="eleven wide column">
-        <div class="ui breadcrumb">
-            <a href="{% url 'base:top' %}" class="section">TOP</a>
-            <i class="right angle icon divider"></i>
-            <a class="active section">ユーザー作成</a>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/create.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <img stlye=" font-size: 10px;" src="../../static/css/themes/default/assets/images/LOGO-1.svg" alt="">
+    <p class="logo-underletter">Successor</p>
+
+    <div class="create-box">
+        <p class="box-ttl">アカウント登録</p>
+        <div class="flow-content">
+            <p class="flow-list-on">❶</p><span class="flow-line"> ー・ー</span>
+            <p class="flow-list">❷</p><span class="flow-line"> ー・ー</span>
+            <p class="flow-list">❸</p>
+            <br>
+            <p class="flow-message">メールアドレス登録</p>
+            <p class="flow-message">プロフィール登録</p>
+            <p class="flow-message">詳細登録</p>
+            　
         </div>
-        <div class="ui segment">
-            <div class="content">
-                <div class="header"><h3>ユーザー作成</h3></div>
-                <form class="ui form" action="" method="POST">
-                    {% csrf_token %}
-                    {{form.as_p}}
-                    <button class="ui orange button" name="next" value="confirm" type="submit">確認</button>
-                </form>
-            </div>
+
+        <div class="create-forms">
+            <h3>メールアドレス登録<span style=" color: red; font-size: 12px; padding-left: 5px;" 　class="must">必須</span></h3>
+            <input class="create-form mb15" type="text" name="q" placeholder="例) example@successor.jp"><br>
+            <input class="create-form" type="text" name="q" placeholder="確認"><br>
         </div>
+        <div class="create-forms">
+            <h3>パスワード登録<span style=" color: red; font-size: 12px; padding-left: 5px;" 　class="must">必須</span></h3>
+            <input class="create-form mb15" type="text" name="q" placeholder="password"><br>
+            <input class="create-form" type="text" name="q" placeholder="確認"><br>
+        </div>
+        <a href="" class="create-btn">プロフィール登録へ</a>
     </div>
-    {% include 'base/sidebar.html' %}
-</div>
-{% endblock %}
+
+
+</body>
+
+</html>

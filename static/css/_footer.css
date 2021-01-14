@@ -1,0 +1,19 @@
+/*
+_footer.html
+ */
+
+.footer{
+    text-align: center;
+    background-color: #EEF1F2;
+}
+
+.footer.logo{
+    background-color: black;
+}
+
+.footer.successor{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-family: 'BookBookman Old Style';
+}

@@ -1,26 +1,31 @@
+{#baseを継承しない方向で進めたい#}
+
 {% extends 'base/base.html' %}
-{% block title %}Successor - {{ block.super }}{% endblock %}
+{% load static %}
+{% block title %}{{ block.super }}{% endblock %}
+
+{% block topcss %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/takada.css' %}">
+
+{% endblock %}
+
 {% block content %}
-<div class="ui grid stackable">
-    <div class="eleven wide column">
-        <div class="ui breadcrumb">
-            <a href="{% url 'base:top' %}" class="section">TOP</a>
-            <i class="right angle icon divider"></i>
-            <a class="active section">ログイン</a>
-        </div>
-        <div class="ui segment">
-            <div class="content">
-                <div class="header"><h3>ログイン</h3></div>
-                <form class="ui form" action="" method="POST">
-                    {% csrf_token %}
-                    {{form.as_p}}
-                    <button class="ui orange button" type="submit">ログイン</button>
-                </form>
-            </div>
-        </div>
-        <a class="ui item" href="{% url 'accounts:create' %}">ユーザー登録</a>／
-        <a class="ui item" href="{% url 'accounts:password_reset' %}">パスワードを忘れた場合</a>
+
+<div class="all-content">
+    <img stlye=" font-size: 10px;" src="../../static/css/themes/default/assets/images/LOGO-1.svg" alt="">
+    <p class="logo-underletter">Successor</p>
+
+    <div class="form-box">
+        <h1 class="form-ttl">Login</h1>
+        <input class="registration-form1" type="text" name="q" placeholder="メールアドレス"><br>
+        <input class="registration-form1" type="text" name="q" placeholder="メールアドレス"><br>
+        <input class="registration-form2" type="password" name="q" placeholder="パスワード"><br>
+
+        <p><a class="login-btn" href="">ログイン</a></p>
+        <p><a class="login-btm-message">パスワードをお忘れの方</a></p>
     </div>
-    {% include 'base/sidebar.html' %}
+
 </div>
+{#    {% include 'base/sidebar.html' %}#}
 {% endblock %}

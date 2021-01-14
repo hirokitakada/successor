@@ -1,0 +1,80 @@
+body {
+    background-color: #EEF1F2;
+    text-align: center;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.all-content {
+    background-color: #EEF1F2;
+    padding-bottom: 100px;
+}
+.form-box {
+    margin: 0 auto;
+    height: 280px;
+    width: 40%;
+    background-color: white;
+    border-radius: 60px;
+    padding-bottom: 20px;
+}
+.form-ttl {
+    padding: 20px 0 10px 0;
+    border-bottom: solid 1px #0070C0;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}
+.sa {
+    padding: 5px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+​
+​
+.login-btn {
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #0070C0;
+    text-decoration: none;
+    color: #0070C0;
+    font-size: 18px;
+    padding: 3px 0;
+    width: 60%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.login-btm-message {
+    text-decoration: none;
+    padding-top: 10px;
+    margin-top: 10px;
+    color: #0070C0;
+    font-size: 12px;
+
+}
+.sample {
+    padding: 30px 0;
+}
+.logo-underletter:first-letter {
+    color: #0070C0;
+}
+.logo-underletter {
+    font-size: 16px;
+    font-weight: bold
+}
+img {
+    width: 40px;
+    height: 40px;
+}
+.registration-form1 {
+    height: 30px;
+    width: 80%;
+    margin: 15px;
+}
+.registration-form2 {
+height: 30px;
+width: 80%;
+margin-bottom: 30px;
+}

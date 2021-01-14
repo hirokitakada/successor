@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
     'base',
     'thread',
     'api',
-    'accounts',
 ]
 
 SITE_ID = 1
@@ -60,7 +60,9 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
+LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = '/'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

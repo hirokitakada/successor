@@ -1,15 +1,21 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block title %}{{ block.super }}{% endblock %}
+{% block topcss %}
+    <link rel="stylesheet" href="{% static 'css/introduce.css' %}">
+    <link rel="stylesheet" href="{% static 'css/takada.css' %}">
+{% endblock %}
 {% block content %}
 
-<body style="background-color:#EEF1F2;">
 
+<body>
     <div class="top-wrapper">
         <div class="header-img">
-            <img src="" alt="ユーザーのヘッダー画像">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+
         </div>
     </div>
-
+    
     <div class="main-wrapper">
 
         <div class="user-name">
@@ -21,13 +27,11 @@
             </a>
         </div>
 
-
         <div class="introduce">
             <p class="heading-letter">自己紹介</p>
             <div class="introcude-textbox">
                 <p class="introduce-letter">こんにちは！！</p>
             </div>
-
         </div>
 
         <div class="boder-bottom"></div>
@@ -70,38 +74,122 @@
         <div class="create-room profile-box">
             <p class="heading-letter">作成ルーム</p>
 
-            <div class="create-room-items">
-                <div class="clear"></div>
-                <div class="create-left-content">
-                    <img src="static/css/themes/default/assets/images/IMG_8991.jpg" class="profile-img" alt="">
-                </div>
-                <div class="create-right-content">
-                    <p style="color: black;">佐藤　大樹<i style="color: gray;" class="fas fa-volume-up"></i></p>
-                    <p>view 1000</p>
-                </div>
 
 
+            <div class="room-box">
+                <a href=""></a>
+                <div class="left-box">
+                    <img class="test-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+                </div>
+                <div class="right-box">
+                    <p>佐藤大樹<i style="color: gray;" class="fas fa-volume-up"></i></p>
+                    <p class="mini-view">view<br>100</p>
+                    <p style="padding-bottom: 15px;">現勤務先</p>
+                    <p>○○について話せます！</p>
+                    <p>○○について聞きたいです！</p>
+                </div>
             </div>
-            <div class="ui cards">
-                <div class="card">
-                    <div class="content">
-                        <div class="header">Elliot Fu</div>
-                        <div class="description">
-                            Elliot Fu is a film-maker from New York.
-                        </div>
-                    </div>
-                    <div class="ui bottom attached button">
-                        <i class="add icon"></i>
-                        Add Friend
-                    </div>
+
+            <div class="room-box">
+                <a href=""></a>
+                <div class="left-box">
+                    <img class="test-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+                </div>
+                <div class="right-box">
+                    <p>佐藤大樹<i style="color: gray;" class="fas fa-volume-up"></i></p>
+                    <p class="mini-view">view<br>100</p>
+                    <p style="padding-bottom: 15px;">現勤務先</p>
+                    <p>○○について話せます！</p>
+                    <p>○○について聞きたいです！</p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 10px;" class="room-box">
+                <a href=""></a>
+                <div class="left-box">
+                    <img class="test-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+                </div>
+                <div class="right-box">
+                    <p>佐藤大樹<i style="color: gray;" class="fas fa-volume-up"></i></p>
+                    <p class="mini-view">view<br>100</p>
+                    <p style="padding-bottom: 15px;">現勤務先</p>
+                    <p>○○について話せます！</p>
+                    <p>○○について聞きたいです！</p>
                 </div>
             </div>
 
         </div>
-    </div>
-    </div>
+        <div class="boder-bottom"></div>
 
 
+        <div class="review-head-message">
+            <p class="review-head-letter">= Review =</p>
+            <p class="review-head-letter">10</p>
+        </div>
+        <div class="reviews">
+            <div class="review">
+                <div class="review-head-comment">
+                    <p class="">記載年月日</p>
+                    <p class="">年齢　性別　職歴</p>
+                    <p class="">ルームテーマ：パラレルキャリアについて話しますよ！</p>
+                </div>
+                <p class="no-life">No Comment No Life</p>
+            </div>
+            <div class="review">
+                <div class="review-head-comment">
+                    <p class="">記載年月日</p>
+                    <p class="">年齢　性別　職歴</p>
+                    <p class="">ルームテーマ：パラレルキャリアについて話しますよ！</p>
+                </div>
+                <p class="no-life">No Comment No Life</p>
+            </div>
+            <div class="review">
+                <div class="review-head-comment">
+                    <p class="">記載年月日</p>
+                    <p class="">年齢　性別　職歴</p>
+                    <p class="">ルームテーマ：パラレルキャリアについて話しますよ！</p>
+                </div>
+                <p class="no-life">No Comment No Life</p>
+            </div>
+            <div class="review">
+                <div class="review-head-comment">
+                    <p class="">記載年月日</p>
+                    <p class="">年齢　性別　職歴</p>
+                    <p class="">ルームテーマ：パラレルキャリアについて話しますよ！</p>
+                </div>
+                <p class="no-life">No Comment No Life</p>
+            </div>
+            <div class="review">
+                <div class="review-head-comment">
+                    <p class="">記載年月日</p>
+                    <p class="">年齢　性別　職歴</p>
+                    <p class="">ルームテーマ：パラレルキャリアについて話しますよ！</p>
+                </div>
+                <p class="no-life">No Comment No Life</p>
+            </div>
+            <div class="review">
+                <div class="review-head-comment">
+                    <p class="">記載年月日</p>
+                    <p class="">年齢　性別　職歴</p>
+                    <p class="">ルームテーマ：パラレルキャリアについて話しますよ！</p>
+                </div>
+                <p class="no-life">No Comment No Life</p>
+            </div>
+        </div>
+
+        <div class="more-see">
+            <a href="" style="text-decoration: none; color: #fff;">
+                もっと見る
+            </a>
+        </div>
+
+        <div class="boder-bottom "></div>
+
+        <div class="view-profile">
+            <p style="padding-bottom: 10px;">= View Profile =</p>
+            <p>500</p>
+        </div>
+    </div>
 
 </body>
 

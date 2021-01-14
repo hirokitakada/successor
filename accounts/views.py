@@ -22,6 +22,9 @@ from django.contrib.auth.forms import (
     UserChangeForm,
     )
 
+class AccountsView(TemplateView):
+    template_name = "registration/account.html"
+
 class UserProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'registration/profile.html'
     def get_queryset(self):
@@ -73,6 +76,8 @@ class UserCreateView(FormView):
 class CustomLoginView(LoginView):
     # form_class = CustomAuthenticationForm
     form_class = EmailAuthenticationForm
+    template_name = 'registration/login.html'
+
 
 class CustomLogoutView(LogoutView):
     template_name = 'registration/logged_out.html'

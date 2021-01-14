@@ -1,0 +1,35 @@
+/*
+base.html
+ */
+
+body {
+    background-color: #EEF1F2;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    background-color: #EEF1F2;
+    align-items: center;
+    padding: 10px;
+}
+.logoImg{
+    width: 40px;
+    height: 40px
+}
+
+
+
+

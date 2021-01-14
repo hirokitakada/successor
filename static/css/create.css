@@ -1,0 +1,92 @@
+body {
+    background-color: #EEF1F2;
+    text-align: center;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.logo-underletter:first-letter {
+    color: #0070C0;
+}
+.logo-underletter {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+img {
+    width: 40px;
+    height: 40px;
+}
+.create-box {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 30px;
+    background-color: #fff;
+}
+.box-ttl {
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 20px;
+    width: 90%;
+    border-bottom: solid 1px #0070C0;
+}
+.flow-list {
+    font-size: 20px;
+    color: gray;
+}
+.flow-list-on {
+    color: #0070C0;
+    font-size: 20px;
+}
+.flow-line {
+    color: #0070C0;
+}
+.flow-message {
+    font-size: 10px;
+    position: relative;
+    top: -10px;
+}
+.flow-content {
+    flex-wrap: nowrap;
+}
+.flow-content p {
+    display: inline-block;
+}
+.create-form {
+    background-color:  #EEF1F2;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    width: 80%;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 12px;
+}
+::placeholder {
+  color: gray;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.create-btn {
+    text-align: center;
+    display: block;
+    padding: 2px 10px;
+    background-color: #0070C0;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    width: 35%;
+    cursor: pointer;
+    min-width: 110px;
+}
+.create-btn:hover {
+    opacity: 0.7;
+    transition: all .4s;
+}

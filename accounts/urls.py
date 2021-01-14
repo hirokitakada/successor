@@ -11,6 +11,11 @@ app_name = 'accounts'
 urlpatterns = [
     # copy from django.contrib.auth.urls.py
     path('login/', views.CustomLoginView.as_view(), name='login'),
+    path('', views.AccountsView.as_view(), name='accounts'),
+
+    #ページ遷移を変えたい時
+    #path('', views.CustomLoginView.as_view(), name='login'),
+
     path('logout/', views.CustomLogoutView.as_view(), name='logout'),
 
     # path('password_change/', av.PasswordChangeView.as_view(), name='password_change'),

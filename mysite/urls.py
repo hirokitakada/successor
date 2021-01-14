@@ -19,6 +19,8 @@ from django.conf import settings
 import base
 from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.static import static
+# ログインしないと入れないようにするためのもの
+# from django.contrib.auth.decorators import login_required
 
 
 from thread.sitemaps import TopicSitemap, CategorySitemap
@@ -33,13 +35,14 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base.urls'), name='index'),
+    #topページにアクセスしたらaccountsページに移行させたい時
+    #path('', include('accounts.urls'), name='index'),
     path('accounts/', include('accounts.urls')),
     path('thread/', include('thread.urls')),
     path('api/', include('api.urls')),
     path('search/', include('search.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [

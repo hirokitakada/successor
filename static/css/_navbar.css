@@ -1,0 +1,53 @@
+.headerLogo{
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo:hover {
+  background     : lightgray;               /* フォーカス時の背景色  */
+}
+
+.headerNav {
+    margin: 0 0 0 auto;
+    padding: 0 50px 0 0;
+}
+
+.successorLogo{
+    font-size: 38px;
+    font-family: 'Bookman Old Style',serif;
+    font-weight: bold;
+    color: black;
+}
+
+.successorLogo::first-letter{
+    color: #0070C0;
+}
+/* === 検索ボタン欄のSTYLE設定 =============================== */
+.headerRightButton {
+  padding        : 20px;          /* 内余白              */
+  border-radius  : 6px;                /* 右上下の角丸         */
+  background     : #EEF1F2;            /* ボタンの色           */
+}
+
+ /* === 検索ボタン欄にフォーカスか来たとき =〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇=================== */
+.headerRightButton:hover {
+  background     : lightgray;               /* フォーカス時の背景色  */
+}
+
+ /* === 検索アイコンのSTYLE設定 =============================== */
+.headerIconImg {
+  display        : inline-block;       /* インラインブロック化  */
+  width          : auto;               /* 幅は高さに合わせる    */
+  height         : 24px;               /* 画像の高さ           */
+}
+
+.headerAlert{
+    position: relative;
+    top: 60px;
+    height: 20px;
+    background-color: #ffa500;
+}
+
+.headerAlertText{
+    text-align: center;
+}
