@@ -2,41 +2,29 @@
 <!DOCTYPE html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-language" content="ja">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    {% block meta_tag %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/_navbar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/_footer.css' %}">
+  <meta charset="UTF-8" />
+  <meta http-equiv="content-language" content="ja" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  {% block meta_tag %}{% endblock %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/_navbar.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/_footer.css' %}" />
 
-    {% block topcss %}
-    {% endblock %}
-    {% block logincss %}
-    {% endblock %}
-    {% block introducecss %}
-    {% endblock %}
+  {% block topcss %} {% endblock %}
+  {% block logincss %} {% endblock %}
+  {% block introducecss %} {% endblock %}
+  <link href=“https://use.fontawesome.com/releases/v5.6.1/css/all.css” rel=“stylesheet”>
+  <link href=“https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap” rel=“stylesheet”>
+  {% block css %} {% endblock %}
 
-
-    <link href=“https://use.fontawesome.com/releases/v5.6.1/css/all.css” rel=“stylesheet”>
-    <link href=“https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap” rel=“stylesheet”>
-    {% block css %}
-    {% endblock %}
-{#    <title>#}
-{#        {% block title %}Successor{% endblock %}#}
-{#    </title>#}
+  {#<title>#} {# {% block title %}Successor{% endblock %}#} {#</title>#}
 </head>
 
 <body>
-    {% include "base/_navbar.html" %}
+  {% include "base/_navbar.html" %} {% block content %} {% endblock %} {%
+  include "base/_footer.html" %}
 
-    {% block content %}
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    {% endblock %}
-    {% include "base/_footer.html" %}
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    {% block js %}{% endblock %}
-
+  {% block js %}{% endblock %}
 </body>

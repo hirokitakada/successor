@@ -1,6 +1,4 @@
-body {
-    text-align: center;
-}
+
 .main-wrapper {
     padding-top: 50px;
 }
@@ -70,7 +68,6 @@ font-family: 'Roboto Slab', serif;
   margin-top: 20px;
   border-radius: 20px;
    text-align: left;
-
 }
 
 .heading-letter {
@@ -251,6 +248,3 @@ div {
     text-indent:-999px;
     z-index: 2; /* 必要であればリンク要素の重なりのベース順序指定 */
 }
-
-
-/*以下、create.html  */
