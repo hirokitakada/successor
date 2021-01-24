@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 # from django.contrib.auth.decorators import login_required
 
 
-from thread.sitemaps import TopicSitemap, CategorySitemap
+from room.sitemaps import TopicSitemap, CategorySitemap
 from base.sitemaps import BaseSitemap
 
 sitemaps = {
@@ -38,7 +38,7 @@ urlpatterns = [
     #topページにアクセスしたらaccountsページに移行させたい時
     #path('', include('accounts.urls'), name='index'),
     path('accounts/', include('accounts.urls')),
-    path('thread/', include('thread.urls')),
+    path('room/', include('room.urls')),
     path('api/', include('api.urls')),
     path('search/', include('search.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),

@@ -22,7 +22,7 @@
                 {% if result_list %}
                 {% for result in result_list %}
                 <div class="ui segment message">
-                    <h3><a href="{% url 'thread:topic' pk=result.id %}">{{result.title}}</a></h3>
+                    <h3><a href="{% url 'room:topic' pk=result.id %}">{{result.title}}</a></h3>
                     <p>{{result.message | truncatewords:30}}</p>
                 </div>
                 {% endfor %}

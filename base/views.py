@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 
-from thread.models import Topic
+from room.models import Topic
 
 def top(request):
     # template = loader.get_template('base/top.html')
