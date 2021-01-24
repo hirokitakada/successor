@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'debug_toolbar',
     'base',
-    'thread',
+    'room',
     'api',
+    'message'
 ]
 
 SITE_ID = 1

@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.views.generic import ListView
 from functools import reduce
 from operator import and_
-from thread.models import Topic
+from room.models import Topic
 
 class SearchResultView(ListView):
     template_name = 'search/result.html'

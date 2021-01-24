@@ -26,7 +26,7 @@ class AccountsView(TemplateView):
     template_name = "registration/account.html"
 
 class UserProfileView(LoginRequiredMixin, TemplateView):
-    template_name = 'registration/profile.html'
+    template_name = 'registration/introduce.html'
     def get_queryset(self):
         return User.objects.get(id=self.request.user.id)
 

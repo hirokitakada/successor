@@ -1,7 +1,7 @@
 from django.views.generic import View
 from django.http import JsonResponse
 
-from thread.models import Vote
+from room.models import Vote
 
 class CreateVoteView(View):
     '''
