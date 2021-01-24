@@ -1,8 +1,15 @@
-{% extends 'base/base.html' %} {% load static %} {% block title %}{{ block.super
-}}{% endblock %} {% block topcss %}
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %} {{ block.super}}{% endblock %}
+
+{% block topcss %}
 <link rel="stylesheet" href="{% static 'css/introduce.css' %}" />
-<link rel="stylesheet" href="{% static 'css/takada.css' %}" />
-{% endblock %} {% block content %}
+{% endblock %}
+
+
+{% block content %}
 
 <body>
   <div class="top-wrapper">
@@ -177,5 +184,6 @@
     </div>
   </div>
 </body>
+{# {% include 'base/sidebar.html' %}#}
 
-{# {% include 'base/sidebar.html' %}#} {% endblock %}
+{% endblock %}
