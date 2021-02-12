@@ -2,15 +2,15 @@
 {% load static %}
 
 {% block title %}{{ block.super }}{% endblock %}
-{% block topcss %}
-    <link rel="stylesheet" href="{% static 'css/top.css' %}">
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/top.css' %}">
 {% endblock %}
 {% block content %}
 
 
 
-<div  style="justify-content:center;">
-    <div style="margin-top:50px;display:flex;" >
+<div style="justify-content:center;">
+    <div style="margin-top:50px;display:flex;">
         <img src="https://source.unsplash.com/random/1" style="height: 200px; width: 200px;">
         <img src="https://source.unsplash.com/random/2" style="height: 200px; width: 200px;">
         <img src="https://source.unsplash.com/random/3" style="height: 200px; width: 200px;">
@@ -22,163 +22,164 @@
     </div>
 </div>
 
-    <h1 class="smallTitle">= Ranking =</h1>
-    <h3 class="smallTitle"> < レビュー数 > </h3>
-    <div class="ranking content">
-        <span class="ranking number1">1</span>
-        <span class="ranking contentright">
+<h1 class="smallTitle">= Ranking =</h1>
+<h3 class="smallTitle">
+    <レビュー数>
+</h3>
+<div class="ranking content">
+    <span class="ranking number1">1</span>
+    <span class="ranking contentright">
         〇〇について聞きたいです
         〇〇について聞きたいです
         〇〇について聞きたいです
         〇〇について聞きたいです
+    </span>
+</div>
+
+<hr style="width: 20%; border-color:#0070C0;">
+
+<div class="ranking content">
+    <span class="ranking number2">2</span>
+    <span class="ranking contentright">
+        〇〇について聞きたいです
+
+    </span>
+</div>
+<hr style="width: 20%; border-color:#0070C0;">
+
+<div class="ranking content">
+    <span class="ranking number3">3</span>
+    <span class="ranking contentright">
+        〇〇について聞きたいです
+    </span>
+</div>
+
+<h1 class="smallTitle">= New Room =</h1>
+<div class="newRoomPosition">
+    <div class="newRoom">
+        <div class="newRoomProfile">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+            <span class="profileName">佐藤大樹</span>
+            {# <span style="margin-left: 10px">現勤務先</span>#}
+        </div>
+
+        <span class="newRoomContent">
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+            〇〇について聞きたいです
         </span>
     </div>
 
-    <hr style="width: 20%; border-color:#0070C0;">
+    <div class="newRoom">
+        <div class="newRoomProfile">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+            <span class="profileName">佐藤大樹</span>
+            {# <span style="margin-left: 10px">現勤務先</span>#}
+        </div>
 
-    <div class="ranking content">
-        <span class="ranking number2">2</span>
-        <span class="ranking contentright">
-        〇〇について聞きたいです
-
-        </span>
-    </div>
-    <hr style="width: 20%; border-color:#0070C0;">
-
-    <div class="ranking content">
-        <span class="ranking number3">3</span>
-        <span class="ranking contentright">
-        〇〇について聞きたいです
+        <span class="newRoomContent">
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+            〇〇について聞きたいです
         </span>
     </div>
 
-    <h1 class="smallTitle">= New Room =</h1>
-        <div class="newRoomPosition">
-            <div class="newRoom">
-                <div class="newRoomProfile">
-                <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
-                    <span class="profileName">佐藤大樹</span>
-    {#                <span style="margin-left: 10px">現勤務先</span>#}
-                </div>
-
-                <span class="newRoomContent">
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                </span>
-            </div>
-
-            <div class="newRoom">
-                <div class="newRoomProfile">
-                <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
-                    <span class="profileName">佐藤大樹</span>
-    {#                <span style="margin-left: 10px">現勤務先</span>#}
-                </div>
-
-                <span class="newRoomContent">
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                </span>
-            </div>
-
-            <div class="newRoom">
-                <div class="newRoomProfile">
-                <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
-                    <span class="profileName">佐藤大樹</span>
-    {#                <span style="margin-left: 10px">現勤務先</span>#}
-                </div>
-
-                <span class="newRoomContent">
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                </span>
-            </div>
+    <div class="newRoom">
+        <div class="newRoomProfile">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+            <span class="profileName">佐藤大樹</span>
+            {# <span style="margin-left: 10px">現勤務先</span>#}
         </div>
 
-        <div class="newRoomPosition">
-            <div class="newRoom">
-                <div class="newRoomProfile">
-                <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
-                    <span class="profileName">佐藤大樹</span>
-    {#                <span style="margin-left: 10px">現勤務先</span>#}
-                </div>
+        <span class="newRoomContent">
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+        </span>
+    </div>
+</div>
 
-                <span class="newRoomContent">
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                </span>
-            </div>
-
-            <div class="newRoom">
-                <div class="newRoomProfile">
-                <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
-                    <span class="profileName">佐藤大樹</span>
-    {#                <span style="margin-left: 10px">現勤務先</span>#}
-                </div>
-
-                <span class="newRoomContent">
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                </span>
-            </div>
-
-            <div class="newRoom">
-                <div class="newRoomProfile">
-                <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
-                    <span class="profileName">佐藤大樹</span>
-    {#                <span style="margin-left: 10px">現勤務先</span>#}
-                </div>
-
-                <span class="newRoomContent">
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                〇〇について聞きたいです
-                </span>
-            </div>
-        </div>
-        ...もっと見る
-
-    <h1 class="smallTitle">= New Review =</h1>
-        <div class="newReview">
-                <div>
-                    記載年月日
-                </div>
-                <div>
-                入社年 職歴
-                </div>
-                ルームテーマ: パラレルキャリアについて話します
-
-        </div>
-    <hr style="width: 20%; border-color:#0070C0;">
-
-        <div class="newReview">
-                <div>
-                    記載年月日
-                </div>
-                <div>
-                入社年 職歴
-                </div>
-                ルームテーマ: パラレルキャリアについて話します
-
-        </div>
-    <hr style="width: 20%; border-color:#0070C0;">
-
-        <div class="newReview">
-                <div>
-                    記載年月日
-                </div>
-                <div>
-                入社年 職歴
-                </div>
-                ルームテーマ: パラレルキャリアについて話します
-
+<div class="newRoomPosition">
+    <div class="newRoom">
+        <div class="newRoomProfile">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+            <span class="profileName">佐藤大樹</span>
+            {# <span style="margin-left: 10px">現勤務先</span>#}
         </div>
 
-        ...もっと見る
+        <span class="newRoomContent">
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+        </span>
+    </div>
+
+    <div class="newRoom">
+        <div class="newRoomProfile">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+            <span class="profileName">佐藤大樹</span>
+            {# <span style="margin-left: 10px">現勤務先</span>#}
+        </div>
+
+        <span class="newRoomContent">
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+        </span>
+    </div>
+
+    <div class="newRoom">
+        <div class="newRoomProfile">
+            <img class="main-img" src="http://127.0.0.1:8000/media/images/IMG_8991.jpg" alt="">
+            <span class="profileName">佐藤大樹</span>
+            {# <span style="margin-left: 10px">現勤務先</span>#}
+        </div>
+
+        <span class="newRoomContent">
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+            〇〇について聞きたいです
+        </span>
+    </div>
+</div>
+...もっと見る
+
+<h1 class="smallTitle">= New Review =</h1>
+<div class="newReview">
+    <div>
+        記載年月日
+    </div>
+    <div>
+        入社年 職歴
+    </div>
+    ルームテーマ: パラレルキャリアについて話します
+
+</div>
+<hr style="width: 20%; border-color:#0070C0;">
+
+<div class="newReview">
+    <div>
+        記載年月日
+    </div>
+    <div>
+        入社年 職歴
+    </div>
+    ルームテーマ: パラレルキャリアについて話します
+
+</div>
+<hr style="width: 20%; border-color:#0070C0;">
+
+<div class="newReview">
+    <div>
+        記載年月日
+    </div>
+    <div>
+        入社年 職歴
+    </div>
+    ルームテーマ: パラレルキャリアについて話します
+
+</div>
+
+...もっと見る
 
 {% endblock %}
-

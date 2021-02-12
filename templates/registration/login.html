@@ -1,12 +1,10 @@
-{#baseを継承しない方向で進めたい#}
-
 {% extends 'base/base.html' %}
 {% load static %}
 {% block title %}{{ block.super }}{% endblock %}
 
 {% block topcss %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <link rel="stylesheet" href="{% static 'css/takada.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/takada.css' %}">
 
 {% endblock %}
 
@@ -27,5 +25,5 @@
     </div>
 
 </div>
-{#    {% include 'base/sidebar.html' %}#}
+{# {% include 'base/sidebar.html' %}#}
 {% endblock %}

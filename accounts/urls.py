@@ -12,9 +12,11 @@ urlpatterns = [
     # copy from django.contrib.auth.urls.py
     path('login/', views.CustomLoginView.as_view(), name='login'),
     path('', views.AccountsView.as_view(), name='accounts'),
+    path('introduce/', views.UserProfileView.as_view(), name='intro'),
 
-    #ページ遷移を変えたい時
-    #path('', views.CustomLoginView.as_view(), name='login'),
+
+    # ページ遷移を変えたい時
+    # path('', views.CustomLoginView.as_view(), name='login'),
 
     path('logout/', views.CustomLogoutView.as_view(), name='logout'),
 
@@ -35,7 +37,6 @@ urlpatterns = [
     path('reset/done/', views.CustomPasswordResetCompleteView.as_view(), name='password_reset_complete'),
 
     path('create/', views.UserCreateView.as_view(), name="create"),
-    path('introduce/', views.UserProfileView.as_view(),name='intro'),
-    #path('profile/', views.UserProfileView.as_view(), name="profile"),
+    # path('profile/', views.UserProfileView.as_view(), name="profile"),
     path('change/', views.EmailChangeView.as_view(), name="change"),
 ]
