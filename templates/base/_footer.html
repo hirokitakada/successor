@@ -1,18 +1,13 @@
+{% load static %}
 <div class="footer">
-    <img style="width:40px;height:40px;margin:2% 48.7% 0% 48.7%" src="static/images/logo.jpg">
-    <b class="footer successor" style="font-size: 20px;">
-        <span style="color:black;"><span style="color:#0070C0;">S</span>uccessor</span>
-    </b>
+    <a href="/">
+        <img style="width:40px;height:40px;margin:2% 48.7% 0% 48.7%" src="{% static 'images/logo.jpg' %}">
+        <p class="footer successor-letter" href=""><span style="color:#0070C0;">S</span>uccessor</p>
+    </a>
 
-    <div class="ui container center aligned">
-        <div class="ui horizontal inverted small divided link list">
-            <a href="{% url 'base:top' %}" class="item" style="margin: 15px">
-                <a class="item"><span style="color:#4689FF">S</span><span style="color: black">uccessorとは</span></a>
-            </a>
-            <a href="{% url 'base:terms' %}" class="item" style="color: black">お問い合わせ</a>
-            <a href="{% url 'base:terms' %}" class="item" style="color: black">利用規約</a>
-            <a href="{% url 'base:policy' %}" class="item" style="color: black">プライバシーポリシー</a>
-        </div>
-        <p style="color:black">Copyright 2020 Successor</p>
-    </div>
+    <a href="{% url 'base:about' %}" class="footer-item">Successorとは</a>
+    <a href="{% url 'base:contact' %}" class="footer-item">お問い合わせ</a>
+    <a href="{% url 'base:terms' %}" class="footer-item">利用規約</a>
+    <a href="{% url 'base:policy' %}" class="footer-item">プライバシーポリシー</a>
+    <p class="copyright">Copyright 2020 Successor</p>
 </div>

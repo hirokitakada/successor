@@ -2,28 +2,23 @@
 {% load static %}
 {% block title %}{{ block.super }}{% endblock %}
 
-{% block topcss %}
+{% block css %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
-<link rel="stylesheet" href="{% static 'css/takada.css' %}">
-
 {% endblock %}
-
 {% block content %}
-
 <div class="all-content">
-    <img stlye=" font-size: 10px;" src="../../static/css/themes/default/assets/images/LOGO-1.svg" alt="">
-    <p class="logo-underletter">Successor</p>
+    <!-- <img stlye=" font-size: 10px;" src="{% static 'images/logo.jpg' %}" alt=""> -->
+    <!-- <p class="logo-underletter">Successor</p> -->
 
     <div class="form-box">
         <h1 class="form-ttl">Login</h1>
         <input class="registration-form1" type="text" name="q" placeholder="メールアドレス"><br>
-        <input class="registration-form1" type="text" name="q" placeholder="メールアドレス"><br>
         <input class="registration-form2" type="password" name="q" placeholder="パスワード"><br>
-
-        <p><a class="login-btn" href="">ログイン</a></p>
-        <p><a class="login-btm-message">パスワードをお忘れの方</a></p>
     </div>
+    <a href="" class="login-btn">サインイン</a>
+    <a href="" class="forget-password">Forget password?</a>
+
 
 </div>
-{# {% include 'base/sidebar.html' %}#}
+{% include 'base/_footer.html' %}
 {% endblock %}

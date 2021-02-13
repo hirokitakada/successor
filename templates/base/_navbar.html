@@ -1,6 +1,7 @@
+{% load static %}
 <header>
   <a href="/" class="headerLogo">
-    <img class="logoImg" src="static/images/logo.jpg" />
+    <img class="logoImg" src="{% static 'images/logo.jpg' %}" />
     <span class="successorLogo">Successor</span>
   </a>
 
@@ -8,22 +9,22 @@
     <ul>
       <li>
         <a href="/" class="headerRightButton">
-          <img src="static/images/searchIcon.png" class="headerIconImg" />
+          <img src="{% static 'images/searchIcon.png' %}" class="headerIconImg" />
         </a>
       </li>
       <li>
         <a href="/" class="headerRightButton">
-          <img src="static/images/messageIcon.png" class="headerIconImg" />
+          <img src="{% static 'images/messageIcon.png' %}" class="headerIconImg" />
         </a>
       </li>
       <li>
         <a href="/" class="headerRightButton">
-          <img src="static/images/alertIcon.png" class="headerIconImg" />
+          <img src="{% static 'images/alertIcon.png' %}" class="headerIconImg" />
         </a>
       </li>
       <li>
         <a href="/accounts/introduce/" class="headerRightButton">
-          <img src="static/images/userIcon.png" class="headerIconImg" />
+          <img src="{% static 'images/userIcon.png' %}" class="headerIconImg" />
         </a>
       </li>
     </ul>

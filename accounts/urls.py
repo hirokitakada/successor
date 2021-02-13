@@ -33,8 +33,10 @@ urlpatterns = [
 
     path('password_reset/', views.CustomPasswordResetView.as_view(), name='password_reset'),
     path('password_reset/done/', views.CustomPasswordResetDoneView.as_view(), name='password_reset_done'),
-    path('reset///', views.CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset///', av.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', views.CustomPasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    
+    
 
     path('create/', views.UserCreateView.as_view(), name="create"),
     # path('profile/', views.UserProfileView.as_view(), name="profile"),
