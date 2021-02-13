@@ -25,7 +25,12 @@ from django.contrib.auth.forms import (
 class AccountsView(TemplateView):
     template_name = "registration/account.html"
 
-class UserProfileView(LoginRequiredMixin, TemplateView):
+# class UserProfileView(LoginRequiredMixin, TemplateView):
+#     template_name = 'registration/introduce.html'
+#     def get_queryset(self):
+#         return User.objects.get(id=self.request.user.id)
+
+class UserProfileView(TemplateView):
     template_name = 'registration/introduce.html'
     def get_queryset(self):
         return User.objects.get(id=self.request.user.id)

@@ -1,139 +1,54 @@
-
-
-/*.login{*/
-/*    display: inline-block;*/
-/*    font-size: 20px;*/
-/*    padding: 5px;*/
-/*    height: 30px;*/
-/*    margin: 20px 10px 20px 10px;*/
-/*    color: #0070C0;*/
-/*    border: thin solid #0070C0;*/
-/*    border-radius: 10px;*/
-
-/*}*/
-
-/*.signup{*/
-/*    display: inline-block;*/
-/*    font-size: 25px;*/
-/*    color: #EEF1F2;*/
-/*    background-color: #0070C0;*/
-/*    border-radius: 10px;*/
-/*    margin: 10px;*/
-/*    padding: 15px 10px 0px 10px;*/
-/*}*/
-
 /*
 top.html
  */
-body{
-    text-align: center;
-}
 
-.smallTitle{
-    text-align: center;
-    color: #0070C0;
-}
 
-.ranking.content {
-    color: #0070C0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 10px;
-    background-color: white;
-    width: 35%;
-    height: 50px;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.ranking.contentright{
-    display: flex;
-    justify-content: center;
-    margin-right: 25px;
-    margin-left: 25px;
 
-    width: 80%;
 
-}
-.ranking.number1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: white;
-    width: 40px;
-    height: 40px;
-    background-color: khaki;
-    border-radius: 50%;
-    margin-left: 10px;
-    margin-right: auto;
-}
-
-.ranking.number2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: white;
-    width: 40px;
-    height: 40px;
-    background-color: gainsboro;
-    border-radius: 50%;
-    margin-left: 10px;
-    margin-right: auto;
-
-}
-.ranking.number3{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: white;
-    width: 40px;
-    height: 40px;
-    background-color: #90532b;
-    border-radius: 50%;
-    margin-left: 10px;
-    margin-right: auto;
-}
 .newRoomPosition{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 2%;
+    margin: 7% 25% 0% 25% ;
 }
 
 .newRoom{
-    width: 26%;
-    height: auto;
-    border-radius: 10px;
+    border-radius: 25px;
     background-color: white;
-    padding: 0.5%
+    padding: 0.5%;
+    margin-bottom: 2.5%;
 }
 .main-img {
-    width: 20%;
-    height: 20%;
-    border-radius: 50px;
-    z-index: 10;
+    width: 10%;
+    height: 10%;
+    border-radius: 100px;
+    margin-right: 10%;
 }
 .newRoomProfile{
     display: flex;
-    justify-content: space-around;
+    margin: 0 5% 0 5%;
     align-items: center;
 }
+
 .profileName{
     font-weight: bold;
 }
-.newReview{
-    margin: auto;
-    width: 26%;
-    height: auto;
-    border-radius: 10px;
-    background-color: white;
-    padding: 0.5%
+.make-room-btn {
+    margin: 0 auto;
+    display: block;
+    border: 2px solid #0070C0;
+    text-decoration: none;
+    color: #0070C0;
+    font-weight: bolder;
+    font-size: 25px;
+    padding: 3px 0;
+    width: 30%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
 }
-.newReviewProfile{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.make-room-btn:hover {
+    background-color: #0070C0;
+    color: white;
+    transition-duration: 0.5s
 }
