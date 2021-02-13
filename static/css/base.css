@@ -2,8 +2,12 @@
 base.html
  */
 
+
+
 body {
     background-color: #EEF1F2;
+    overscroll-behavior: none;
+    text-align: center;
 }
 
 a {
