@@ -5,15 +5,13 @@ from .forms import (
     CustomAuthenticationForm, CustomPasswordChangeForm
 )
 
-
 app_name = 'accounts'
 
 urlpatterns = [
     # copy from django.contrib.auth.urls.py
     path('login/', views.CustomLoginView.as_view(), name='login'),
     path('', views.AccountsView.as_view(), name='accounts'),
-    path('introduce/', views.UserProfileView.as_view(), name='intro'),
-
+    path('introduce/', views.UserProfileView.as_view(), name='introduce'),
 
     # ページ遷移を変えたい時
     # path('', views.CustomLoginView.as_view(), name='login'),
