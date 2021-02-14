@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'base',
     'room',
     'api',
-    'message'
 ]
 
 SITE_ID = 1

@@ -1,19 +1,13 @@
-/*
-_footer.html
- */
-
 .footer{
     text-align: center;
     background-color: #EEF1F2;
 }
-
-.footer.logo{
-    background-color: black;
+.successor-letter {
+    font-weight: bold;
 }
-
-.footer.successor{
-    text-align: center;
-    color: black;
-    font-size: 50px;
-    font-family: 'BookBookman Old Style';
+.footer a {
+    color: #000;
+}
+.footer-item {
+    padding: 0 5px;
 }

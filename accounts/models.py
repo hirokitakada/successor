@@ -60,7 +60,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(
         _('username'),
         max_length=50,
-        unique=True,
+        unique=False,
+        blank=False,
         # help_text=_('Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.'),
         help_text='この項目は必須です。全角文字、半角英数字、@/./+/-/_ で50文字以下にしてください。',
         validators=[username_validator],
@@ -73,8 +74,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(
         _('email address'),
         help_text='この項目は必須です。メールアドレスは公開されません。',
-        blank=False
+        blank=False,
+        unique = True
     )
+
+
     is_staff = models.BooleanField(
         _('staff status'),
         default=False,
@@ -88,6 +92,25 @@ class User(AbstractBaseUser, PermissionsMixin):
             'Unselect this instead of deleting accounts.'
         ),
     )
+
+    profile = models.ImageField(upload_to='profile/',blank=True)
+    picture = models.ImageField(upload_to='picture/',blank=True)
+    text = models.TextField(max_length=200,blank=True)
+
+    startyear = models.IntegerField(default=2020,blank=True)
+    company = models.CharField(max_length=200,blank=True)
+    department = models.CharField(max_length=200,blank=True)
+    section = models.CharField(max_length=200,blank=True)
+    first_period = models.DateField(default=timezone.now,blank=True)
+    end_period = models.DateField(default=timezone.now,blank=True)
+    enrolment = models.BooleanField(default=True,blank=True)
+    hobby = models.CharField(max_length=200,blank=True)
+    activities_1 = models.CharField(max_length=200,blank=True)
+    activities_2 = models.CharField(max_length=200,blank=True)
+    other = models.CharField(max_length=200,blank=True)
+    message = models.CharField(max_length=200,blank=True)
+
+
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
     objects = UserManager()
@@ -122,3 +145,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         """Send an email to this user."""
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
+
+
+class Image(models.Model):
+    picture = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
