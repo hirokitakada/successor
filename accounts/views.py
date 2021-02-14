@@ -10,7 +10,9 @@ from django.contrib.auth.views import (
 from django.urls import reverse_lazy
 from django.contrib.auth import login, authenticate
 
-from .models import User
+from .models import User, Image
+from .forms import ImageForm
+
 from .forms import (
     UserInfoChangeForm,
     CustomAuthenticationForm, CustomPasswordChangeForm,
@@ -53,17 +55,87 @@ class EmailChangeView(LoginRequiredMixin, FormView):
         })
         return kwargs
 
+
+
+"""
 class UserCreateView(FormView):
     # form_class = UserCreationForm
     form_class = CustomUserCreationForm
     template_name = 'registration/create.html'
     success_url = reverse_lazy('accounts:profile')
+
     def form_valid(self, form):
+
+        domains = ['east.ntt.co.jp', 'west.ntt.co.jp']
+
         print(self.request.POST['next'])
         if self.request.POST['next'] == 'back':
+            print(form)
             return render(self.request, 'registration/create.html', {'form': form})
         elif self.request.POST['next'] == 'confirm':
             return render(self.request, 'registration/create_confirm.html', {'form': form})
+        elif self.request.POST['next'] == 'regist':
+            print(form.cleaned_data['text'])
+            form.save()
+            # 認証
+            user = authenticate(
+                email=form.cleaned_data['email'],
+                password=form.cleaned_data['password1'],
+            )
+            # ログイン
+            login(self.request, user)
+            return super().form_valid(form)
+
+        elif self.request.POST['next'] == 'introduce':
+            print(form)
+            address = str(form.cleaned_data['email'])
+            #print(address)
+            _, domain = address.split('@')
+            #print(domain)
+
+            if domain in domains:
+                return render(self.request, 'registration/create_introduce.html', {'form': form})
+            else:
+                print("error")
+                return render(self.request, 'registration/create.html', {'form': form})
+
+        elif self.request.POST['next'] == 'details':
+            print(form)
+            return render(self.request, 'registration/create_details.html', {'form': form})
+
+        else:
+            # 通常このルートは通らない
+            return redirect(reverse_lazy('base:top'))
+"""
+
+class UserCreateView(FormView):
+    # form_class = UserCreationForm
+    form_class = CustomUserCreationForm
+    template_name = 'registration/create.html'
+    success_url = reverse_lazy('accounts:profile')
+
+    def form_valid(self, form):
+
+        domains = ['east.ntt.co.jp', 'west.ntt.co.jp']
+
+        print(self.request.POST['next'])
+
+        if self.request.POST['next'] == 'back':
+            return render(self.request, 'registration/create.html', {'form': form})
+        elif self.request.POST['next'] == 'confirm':
+            print(form)
+            address = str(form.cleaned_data['email'])
+            # print(address)
+            _, domain = address.split('@')
+
+            if domain in domains:
+                # print(domain)
+                context = {'form': form}
+                return render(self.request, 'registration/create_confirm.html', {'form': form})
+            else:
+                print("error")
+                return render(self.request, 'registration/create.html', {'form': form})
+
         elif self.request.POST['next'] == 'regist':
             form.save()
             # 認証
@@ -74,9 +146,13 @@ class UserCreateView(FormView):
             # ログイン
             login(self.request, user)
             return super().form_valid(form)
+
         else:
             # 通常このルートは通らない
             return redirect(reverse_lazy('base:top'))
+
+
+
 
 class CustomLoginView(LoginView):
     # form_class = CustomAuthenticationForm
@@ -140,3 +216,23 @@ class CustomPasswordResetConfirmView(PasswordResetConfirmView):
 
 class CustomPasswordResetCompleteView(PasswordResetCompleteView):
     template_name = 'registration/password_reset_complete.html'
+
+
+
+def upload(request):
+    if request.method == "POST":
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('accounts/showall')
+    else:
+        form = ImageForm()
+
+    context = {'form':form}
+    return render(request, 'album/upload.html', context)
+
+
+def showall(request):
+    images = Image.objects.all()
+    context = {'images':images}
+    return render(request, 'album/showall.html', context)

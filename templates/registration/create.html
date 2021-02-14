@@ -1,43 +1,136 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css/create.css">
+    <link rel="stylesheet" href="{% static 'css/create.scss' %}">
+    <link rel="stylesheet" href="{% static 'css/create.css' %}">
+
     <title>Document</title>
 </head>
 
 <body>
-    <img stlye=" font-size: 10px;" src="../../static/css/themes/default/assets/images/LOGO-1.svg" alt="">
-    <p class="logo-underletter">Successor</p>
+<div class="head">
+<img stlye=" font-size: 10px;" src="{% static 'images/logo.png' %}" alt="">
+<p class="logo-underletter">Successor</p>
+</div>
 
-    <div class="create-box">
-        <p class="box-ttl">アカウント登録</p>
-        <div class="flow-content">
-            <p class="flow-list-on">❶</p><span class="flow-line"> ー・ー</span>
-            <p class="flow-list">❷</p><span class="flow-line"> ー・ー</span>
-            <p class="flow-list">❸</p>
-            <br>
-            <p class="flow-message">メールアドレス登録</p>
-            <p class="flow-message">プロフィール登録</p>
-            <p class="flow-message">詳細登録</p>
-            　
-        </div>
+<ul class="tab-container">
+    <li>
+        <input class="tab-toggle" id="tab-1" type="radio" name="toggle" checked/>
+{#        <label data-title="Tab 1" class="tab l-b" for="tab-1">Tab 1</label>#}
+        <ul class="tab-content-container">
+            <li class="tab-content">
+                <p class="box-ttl">アカウント登録</p>
+                <div class="flow-content">
+                    <p class="flow-list-on">❶</p><span class="flow-line"> ー・ー</span>
+                    <p class="flow-list">❷</p><span class="flow-line"> ー・ー</span>
+                    <p class="flow-list">❸</p>
+                    <br>
+                    <p class="flow-message">メールアドレス登録</p>
+                    <p class="flow-message">プロフィール登録</p>
+                    <p class="flow-message">詳細登録</p>
+                </div>
 
-        <div class="create-forms">
-            <h3>メールアドレス登録<span style=" color: red; font-size: 12px; padding-left: 5px;" 　class="must">必須</span></h3>
-            <input class="create-form mb15" type="text" name="q" placeholder="例) example@successor.jp"><br>
-            <input class="create-form" type="text" name="q" placeholder="確認"><br>
-        </div>
-        <div class="create-forms">
-            <h3>パスワード登録<span style=" color: red; font-size: 12px; padding-left: 5px;" 　class="must">必須</span></h3>
-            <input class="create-form mb15" type="text" name="q" placeholder="password"><br>
-            <input class="create-form" type="text" name="q" placeholder="確認"><br>
-        </div>
-        <a href="" class="create-btn">プロフィール登録へ</a>
-    </div>
+                <div class="create-forms">
+                    <h3>メールアドレス登録<span style=" color: red; font-size: 12px; padding-left: 5px;"
+                                       　class="must">必須</span></h3>
+                    <input class="create-form mb15" type="text" name="q" placeholder="例) example@successor.jp"><br>
+                    <input class="create-form" type="text" name="q" placeholder="確認"><br>
+                </div>
+                <div class="create-forms">
+                    <h3>パスワード登録<span style=" color: red; font-size: 12px; padding-left: 5px;"
+                                     　class="must">必須</span></h3>
+                    <input class="create-form mb15" type="text" name="q" placeholder="password"><br>
+                    <input class="create-form" type="text" name="q" placeholder="確認"><br>
+                </div>
+                <label for="tab-2" class="create-btn">プロフィール登録へ</label>
+                {#                <div class="arrows">#}
+                {#                    <label class="back" for="tab-4">&#8249;</label>#}
+                {#                    <label class="next" for="tab-2">&#8250; </label>#}
+                {#                </div>#}
+            </li>
+        </ul>
+    </li>
+    <li>
+        <input class="tab-toggle" id="tab-2" type="radio" name="toggle"/>
+{#        <label class="tab" for="tab-2">Tab 2</label>#}
+        <ul class="tab-content-container">
+            <li class="tab-content">
+                <p class="box-ttl">アカウント登録</p>
+                <div class="flow-content">
+                    <p class="flow-list-on">❶</p><span class="flow-line"> ー・ー</span>
+                    <p class="flow-list-on">❷</p><span class="flow-line"> ー・ー</span>
+                    <p class="flow-list">❸</p>
+                    <br>
+                    <p class="flow-message">メールアドレス登録</p>
+                    <p class="flow-message">プロフィール登録</p>
+                    <p class="flow-message">詳細登録</p>
+                    　
+                </div>
 
+                <div class="create-forms">
+
+                    <h3>プロフィールイメージ<span style=" color: red; font-size: 12px; padding-left: 5px;"
+                                       　class="must">必須</span></h3>
+                    <div>
+                    <img class="request-img" src="{% static 'images/userIcon.png' %}" alt="">
+                    </div>
+
+                </div>
+                <div class="create-forms">
+                    <h3>NAME<span style=" color: red; font-size: 12px; padding-left: 5px;"
+                                     　class="must">必須</span></h3>
+                    <input class="create-form mb15" type="text" name="q" placeholder="佐藤大樹"><br>
+
+                </div>
+                <label for="tab-3" class="create-btn">詳細登録へ</label>
+                {#                <div class="arrows">#}
+                {#                    <label class="back" for="tab-1">&#8249;</label>#}
+                {#                    <label class="next" for="tab-3">&#8250; </label>#}
+                {#                </div>#}
+            </li>
+        </ul>
+    </li>
+    <li>
+        <input class="tab-toggle" id="tab-3" type="radio" name="toggle"/>
+{#        <label class="tab" for="tab-3">Tab 3</label>#}
+        <ul class="tab-content-container">
+            <li class="tab-content">
+                <p class="box-ttl">アカウント登録</p>
+                <div class="flow-content">
+                    <p class="flow-list-on">❶</p><span class="flow-line"> ー・ー</span>
+                    <p class="flow-list-on">❷</p><span class="flow-line"> ー・ー</span>
+                    <p class="flow-list-on">❸</p>
+                    <br>
+                    <p class="flow-message">メールアドレス登録</p>
+                    <p class="flow-message">プロフィール登録</p>
+                    <p class="flow-message">詳細登録</p>
+                    　
+                </div>
+
+                <div class="create-forms">
+                    <h3>詳細<span style=" color: red; font-size: 12px; padding-left: 5px;"
+                                       　class="must">必須</span></h3>
+                    <h4>入社年</h4>
+                    <input class="create-form mb15" type="text" name="q" placeholder="3月15日"><br>
+
+                </div>
+                <div class="create-forms">
+                    <h4>職歴<span style=" color: red; font-size: 12px; padding-left: 5px;"
+                                     　class="must">必須</span></h4>
+                    <input class="create-form mb15" type="text" name="q" placeholder="google"><br>
+
+                </div>
+                <a href="/" class="create-btn">登録へ</a>
+
+            </li>
+        </ul>
+    </li>
+
+</ul>
 
 </body>
 

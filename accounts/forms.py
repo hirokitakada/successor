@@ -15,7 +15,7 @@ from django.contrib.auth.forms import (
 from django.utils.translation import gettext_lazy as _
 from django.utils.text import capfirst
 
-from .models import User
+from .models import User, Image
 
 UserModel = get_user_model()
 
@@ -103,7 +103,7 @@ class CustomUserChangeForm(UserChangeForm):
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ('username', 'email')
+        fields = ('username', 'email','profile', 'picture','text','startyear', 'company', 'department','section', 'first_period', 'end_period', 'enrolment','hobby', 'other','message')
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label_suffix','')
@@ -189,3 +189,8 @@ class EmailAuthenticationForm(Form):
             code='invalid_login',
             params={'username': _('Email')},
         )
+
+class ImageForm(forms.ModelForm):
+    class Meta:
+        model = Image
+        fields = ['picture', 'title']

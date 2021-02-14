@@ -1,5 +1,17 @@
 {% load static %}
 <div class="footer">
+<<<<<<< HEAD
+    <a href="/">
+        <img style="width:40px;height:40px;margin:2% 48.7% 0% 48.7%" src="{% static 'images/logo.png' %}">
+        <p class="footer successor-letter" href=""><span style="color:#0070C0;">S</span>uccessor</p>
+    </a>
+
+    <a href="{% url 'base:about' %}" class="footer-item">Successorとは</a>
+    <a href="{% url 'base:contact' %}" class="footer-item">お問い合わせ</a>
+    <a href="{% url 'base:terms' %}" class="footer-item">利用規約</a>
+    <a href="{% url 'base:policy' %}" class="footer-item">プライバシーポリシー</a>
+    <p class="copyright">Copyright 2020 Successor</p>
+=======
         <a href="/">
                 <img style="width:40px;height:40px;margin:2% 48.7% 0% 48.7%" src="{% static 'images/logo.png' %}">
                 <p class="footer successor-letter" href=""><span style="color:#0070C0;">S</span>uccessor</p>
@@ -10,4 +22,5 @@
         <a href="{% url 'base:terms' %}" class="footer-item">利用規約</a>
         <a href="{% url 'base:policy' %}" class="footer-item">プライバシーポリシー</a>
         <p class="copyright">Copyright 2020 Successor</p>
+>>>>>>> master
 </div>
