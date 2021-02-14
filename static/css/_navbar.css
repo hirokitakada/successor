@@ -1,5 +1,13 @@
 header{
     z-index: 9999;
+    height: 40px;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top: 0;
+    background-color: #EEF1F2;
+    align-items: center;
+    padding: 10px;
 }
 .headerLogo{
     display: flex;

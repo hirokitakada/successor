@@ -1,15 +1,60 @@
-{% extends 'base/base.html' %}
-
+{% extends 'registration/base.html' %}
 {% load static %}
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}" />
+{% endblock %}
 {% block title %} {{ block.super}}{% endblock %}
-
-
 {% block content %}
 
-<p>aaa</p>
-<h1>aaaaaaaaaaaaaa</h1>
+<div class="wrapper">
+    <div class="container">
+        <h1 class="account-message1">Welcome to <span
+                style="color: hsl(207, 93%, 37%); font-weight: 800;">S</span>uccessor</h1>
 
-{% include "base/_footer.html" %}
+        <p class="account-message2">『Successor：継承者』</p>
+        <p class="account-message3"> <span class="emphasis">Successor</span>は、ひとりひとりの生き方を尊重し合える文化を築き、
+            人生の節目や日常に寄り添える<span class="emphasis">『心のインフラ』</span>でありたいと思っています。
+            NTTグループ社員の方々との繋がりを創りませんか。
+        </p>
+
+        <form class="form">
+            <button class="sign-btn" style="margin-right: 15px;">Sign up</button>
+            <button class="sign-btn" style="margin-left: 15px;">Sign in</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+
+
+{% block js %}
+<script>
+    $(".sign-btn").click(function (event) {
+        event.preventDefault();
+        location.href = "{% url 'accounts:create' %}";
+        $('form').fadeOut(500);
+        $('.wrapper').addClass('form-success');
+    });
+</script>
+{% endblock %}
 
 {% endblock %}
